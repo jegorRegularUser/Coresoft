@@ -1,31 +1,33 @@
-let intervalId = null;
+function moveSlides(carouselId, direction) {
+  const sliderContainer = document.getElementById(`${carouselId}-slider`);
+  const slides = sliderContainer?.querySelector(".slides");
+  const totalSlides = slides?.querySelectorAll(".slide").length;
 
-let currentIndex = 0;
-const slides = document.querySelector(".slides");
-const totalSlides = document.querySelectorAll(".slide").length;
+  let currentIndex = parseInt(sliderContainer.dataset.currentIndex, 10) || 0;
 
-
-function moveSlides(direction) {
-  clearInterval(intervalId);
-  intervalId = null;
-  intervalId = setInterval(() => {
-    moveSlides(1);
-  }, 5000);
+  clearInterval(sliderContainer.dataset.intervalId);
 
   currentIndex += direction;
-
   if (currentIndex < 0) {
-    currentIndex = totalSlides - 4; 
+      currentIndex = totalSlides - 4;
   } else if (currentIndex > totalSlides - 4) {
-    currentIndex = 0;
+      currentIndex = 0;
   }
 
-  const translateX = -currentIndex * 25 + "%"; 
+  const translateX = -currentIndex * 25 + "%";
   slides.style.transform = `translateX(${translateX})`;
+
+  sliderContainer.dataset.currentIndex = currentIndex;
+  sliderContainer.dataset.intervalId = setInterval(() => {
+      moveSlides(carouselId, 1);
+  }, 5000);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  intervalId = setInterval(() => {
-    moveSlides(1);
-  }, 5000);
+  const carousels = document.querySelectorAll(".slider-container");
+  carousels.forEach(carousel => {
+      carousel.dataset.intervalId = setInterval(() => {
+          moveSlides(carousel.id, 1);
+      }, 5000);
+  });
 });

@@ -472,14 +472,19 @@ a {
 
 
 
-.trust .logos {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.trust {
+    margin: 90px 0 150px;
 }
 
-.trust .logos img {
-    max-width: 100px;
+.trust .text {
+    max-width: 510px;
+    margin: 0 auto;
+    text-align: center;
+}
+.trust .text p{
+    font-size: 20px;
+    color: #5e5e5e;
+    margin:  10px 0 60px;
 }
 
 
