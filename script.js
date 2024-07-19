@@ -15,12 +15,12 @@ function moveSlides(direction) {
   currentIndex += direction;
 
   if (currentIndex < 0) {
-    currentIndex = totalSlides - 4; // Adjust for the last 3 slides being visible
+    currentIndex = totalSlides - 4; 
   } else if (currentIndex > totalSlides - 4) {
     currentIndex = 0;
   }
 
-  const translateX = -currentIndex * (100 / 4) + "%"; // Calculate percentage
+  const translateX = -currentIndex * 25 + "%"; 
   slides.style.transform = `translateX(${translateX})`;
 }
 
