@@ -47,7 +47,7 @@
         </div>
         <ul>
             <li><a href="#services">Услуги</a></li>
-            <li><a href="#services">Кейсы</a></li>
+            <li><a href="#cases">Кейсы</a></li>
             <li><a href="#reviews">Отзывы</a></li>
             <li><a href="#contacts">Контакты</a></li>
         </ul>
@@ -55,7 +55,7 @@
     <main>
         <section class="preview" id="preview">
             <div class="background-img-wrap">
-                <img class="background-img" src="./img/preview.png" alt="preview" />
+                <img class="background-img" src="./assets/img/preview.png" alt="preview" />
             </div>
             <div class="preview-content">
                 <h1 class="title">Core Soft - IT решения для вашей организации</h1>
@@ -78,8 +78,8 @@
 
         <section class="business-solutions" id="solutions">
             <div class="hardware">
-                <img class="hardware-main" src="./img/hardware.png" alt="Hardware" />
-                <img class="hardware-side" src="./img/hardwareSide.png" alt="side-Hardware" />
+                <img class="hardware-main" src="./assets/img/hardware.png" alt="Hardware" />
+                <img class="hardware-side" src="./assets/img/hardwareSide.png" alt="side-Hardware" />
                 <h2 class="title">Hardware</h2>
             </div>
 
@@ -207,13 +207,13 @@
             <div class="slider-container" id="it-infrastructure-slider">
                 <div class="slider" id="it-infrastructure-slider-content">
                     <div class="slides" id="it-infrastructure-slides">
-                        <div class="slide"><img src="./img/lock-company.png" alt="Image 1" /></div>
-                        <div class="slide"><img src="./img/myOffice.png" alt="Image 2" /></div>
-                        <div class="slide"><img src="./img/alt.png" alt="Image 3" /></div>
-                        <div class="slide"><img src="./img/astra.png" alt="Image 4" /></div>
-                        <div class="slide"><img src="./img/lock-company.png" alt="Image 5" /></div>
-                        <div class="slide"><img src="./img/lock-company.png" alt="Image 6" /></div>
-                        <div class="slide"><img src="./img/lock-company.png" alt="Image 7" /></div>
+                        <div class="slide"><img src="./assets/img/lock-company.png" alt="Image 1" /></div>
+                        <div class="slide"><img src="./assets/img/myOffice.png" alt="Image 2" /></div>
+                        <div class="slide"><img src="./assets/img/alt.png" alt="Image 3" /></div>
+                        <div class="slide"><img src="./assets/img/astra.png" alt="Image 4" /></div>
+                        <div class="slide"><img src="./assets/img/lock-company.png" alt="Image 5" /></div>
+                        <div class="slide"><img src="./assets/img/lock-company.png" alt="Image 6" /></div>
+                        <div class="slide"><img src="./assets/img/lock-company.png" alt="Image 7" /></div>
                     </div>
                 </div>
                 <button class="prev carousal-btn" onclick="moveSlides('it-infrastructure', -1)">&#10094;</button>
@@ -301,7 +301,7 @@
                     </ul>
                 </div>
                 <div class="image">
-                    <img src="./img/hardwareSide.png" alt="Solution Box" />
+                    <img src="./assets/img/hardwareSide.png" alt="Solution Box" />
                 </div>
             </div>
         </section>
@@ -309,12 +309,13 @@
         <!-- Automation Section -->
         <section class="automation">
             <div class="background-img-wrap">
-                <img class="background-img" src="./img/autocity.png" alt="autocity" />
+                <img class="background-img" src="./assets/img/autocity.png" alt="autocity" />
             </div>
             <div class="content">
                 <h2 class="title">Автоматизация управления для городов и регионов</h2>
                 <p>Комплексное решение IT-инфраструктуры под ключ</p>
-                <button class="btn-white">Скачать презентацию</button>
+                <a href="./assets/Корсофт.pptx" download="презентация.pptx"><button class="btn-white">Скачать
+                        презентацию</button></a>
             </div>
         </section>
 
@@ -327,32 +328,35 @@
             <div class="slider-container" id="trust-slider">
                 <div class="slider" id="trust-slider-content">
                     <div class="slides" id="trust-slides">
-                        <div class="slide"><img src="./img/stavropol.png" alt="Image 1" /></div>
-                        <div class="slide"><img src="./img/vologod.png" alt="Image 2" /></div>
-                        <div class="slide"><img src="./img/zabalkask.png" alt="Image 3" /></div>
-                        <div class="slide"><img src="./img/neneck.png" alt="Image 4" /></div>
-                        <div class="slide"><img src="./img/ingishetia.png" alt="Image 5" /></div>
-                        <div class="slide"><img src="./img/kostroms.png" alt="Image 6" /></div>
-                        <div class="slide"><img src="./img/magadan.png" alt="Image 7" /></div>
+                        <div class="slide"><img src="./assets/img/stavropol.png" alt="Image 1" /></div>
+                        <div class="slide"><img src="./assets/img/vologod.png" alt="Image 2" /></div>
+                        <div class="slide"><img src="./assets/img/zabalkask.png" alt="Image 3" /></div>
+                        <div class="slide"><img src="./assets/img/neneck.png" alt="Image 4" /></div>
+                        <div class="slide"><img src="./assets/img/ingishetia.png" alt="Image 5" /></div>
+                        <div class="slide"><img src="./assets/img/kostroms.png" alt="Image 6" /></div>
+                        <div class="slide"><img src="./assets/img/magadan.png" alt="Image 7" /></div>
                     </div>
                 </div>
                 <button class="prev carousal-btn" onclick="moveSlides('trust', -1)">&#10094;</button>
                 <button class="next carousal-btn" onclick="moveSlides('trust', 1)">&#10095;</button>
             </div>
         </section>
-        <section class="cases">
+
+
+
+        <section class="cases" id="cases">
             <div class="case-list">
                 <h1 class="title">Наши кейсы</h1>
                 <div class="case">
                     <div class="case-image">
-                        <img src="./img/ingishetia.png" alt="Image 1" />
+                        <img src="./assets/img/ingishetia.png" alt="Image 1" />
                     </div>
                     <p>В Республике Ингушетия мы цифровизировали систему строительного надзора, что способствует
                         повышению качества строительства и обеспечению безопасности зданий и сооружений.</p>
                 </div>
                 <div class="case">
                     <div class="case-image">
-                        <img src="./img/stavropol.png" alt="Image 2" />
+                        <img src="./assets/img/stavropol.png" alt="Image 2" />
                     </div>
                     <p>В Ставропольском крае мы внедрили системы экологического надзора,
                         строительного надзора, жилищного надзора, надзора в области защиты населения
@@ -361,7 +365,7 @@
                 </div>
                 <div class="case">
                     <div class="case-image">
-                        <img src="./img/zabalkask.png" alt="Image 3" />
+                        <img src="./assets/img/zabalkask.png" alt="Image 3" />
                     </div>
                     <p>В Забайкальском крае мы внедрили систему контроля за применением цен на лекарства,
                         что позволило предотвратить необоснованное завышение цен и обеспечить доступность
@@ -370,7 +374,7 @@
                 </div>
                 <div class="case">
                     <div class="case-image">
-                        <img src="./img/kostroms.png" alt="Image 4" />
+                        <img src="./assets/img/kostroms.png" alt="Image 4" />
                     </div>
                     <p>В Костромской области наша компания реализовала проекты по экологическому надзору,
                         строительному надзору, надзору за состоянием объектов культурного наследия,
@@ -379,7 +383,7 @@
                 </div>
                 <div class="case">
                     <div class="case-image">
-                        <img src="./img/magadan.png" alt="Image 5" />
+                        <img src="./assets/img/magadan.png" alt="Image 5" />
                     </div>
                     <p>В Магаданской области наша компания реализовала проекты по экологическому надзору,
                         надзору за состоянием объектов культурного наследия, жилищному надзору и надзору
@@ -389,12 +393,7 @@
             <div class="case-details">
                 <div class="case">
                     <h2>Кейс #1: Построение центра обработки данных органов власти Вологодской области</h2>
-                    <p>Проект направлен на создание центра обработки данных (ЦОД) для органов власти Вологодской
-                        области.
-                        ЦОД будет обеспечивать обработку, хранение и защиту больших объемов данных, необходимых для
-                        работы
-                        государственных структур.
-
+                    <p>
                     <h3>Цели:</h3>
                     <ul>
                         <li>Повышение эффективности работы государственных органов за счет автоматизации процессов
@@ -419,18 +418,14 @@
                         <li>Повышение оперативности и качества предоставления услуг</li>
                     </ul>
                     </p>
-                    <button class="btn">
+                    <button class="btn read-more">
                         <div class="pdf-icon"></div>Читать подробнее
                     </button>
                 </div>
                 <div class="case">
                     <h2>Кейс #2: Построение центра обработки данныхгосударственной информационной системы в сфере
                         здравоохранения Вологодской области</h2>
-                    <p>Проект направлен на создание центра обработки данных (ЦОД) для государственной информационной
-                        системы
-                        в сфере здравоохранения Вологодской области. ЦОД будет обеспечивать обработку, хранение и защиту
-                        медицинских данных пациентов.
-
+                    <p>
                     <h3>Цели:</h3>
                     <ul>
                         <li>Повышение доступности и качества медицинской помощи</li>
@@ -454,7 +449,7 @@
                         <li>Сокращение затрат на ИТ-инфраструктуру</li>
                     </ul>
                     </p>
-                    <button class="btn">
+                    <button class="btn read-more">
                         <div class="pdf-icon"></div>Читать подробнее
                     </button>
                 </div>
@@ -486,7 +481,7 @@
                         <li>Снижение административных барьеров для бизнеса</li>
                     </ul>
                     </p>
-                    <button class="btn">
+                    <button class="btn read-more">
                         <div class="pdf-icon"></div>Читать подробнее
                     </button>
                 </div>
@@ -522,9 +517,27 @@
                         <li>Снижение затрат на ИТ-инфраструктуру</li>
                     </ul>
                     </p>
-                    <button class="btn">
+                    <button class="btn read-more">
                         <div class="pdf-icon"></div>Читать подробнее
                     </button>
+                </div>
+            </div>
+            <div class="modal">
+                <div class="modal-content">
+                    <div class="case">
+                        <h2 id="modal-title"></h2>
+                        <p id="modal-description"></p>
+                        <h3>Цели:</h3>
+                        <ul id="modal-goals"></ul>
+                        <h3>Задачи:</h3>
+                        <ul id="modal-tasks"></ul>
+                        <h3>Результаты:</h3>
+                        <ul id="modal-results"></ul>
+                        <div class="modal-buttons">
+                            <a class="btn download-button"><div class="pdf-icon"></div>Скачать</a>
+                            <button class="btn btn-white close-button">Закрыть</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -597,7 +610,7 @@
             </div>
             <div class="reviews-list">
                 <div class="review">
-                    <img src="./img/maria.png" />
+                    <img src="./assets/img/maria.png" />
                     <p>
                         Core Soft значительно упростила управление организацией. Их панели
                         управления - незаменимый инструмент.
@@ -605,7 +618,7 @@
                     <span>Мария, руководитель государственной поддержки организации</span>
                 </div>
                 <div class="review">
-                    <img src="./img/elena.png" />
+                    <img src="./assets/img/elena.png" />
                     <p>
                         Их экспертиза в поставке и внедрении серверного оборудования
                         впечатляет. Высокий уровень профессионализма.
@@ -613,7 +626,7 @@
                     <span>Елена, руководитель в Администрации г. Вологда</span>
                 </div>
                 <div class="review">
-                    <img src="./img/ivan.png" />
+                    <img src="./assets/img/ivan.png" />
                     <p>
                         Нам понравилась их комплексная автоматизация наших процессов.
                         Результаты впечатляют.
@@ -627,8 +640,8 @@
         <section class="awards">
             <h2 class="title">Наши награды</h2>
             <div class="awards-list">
-                <img src="./img/diplomaBest.png" alt="Award 1" />
-                <img src="./img/diplomaSecond.png" alt="Award 2" />
+                <img src="./assets/img/diplomaBest.png" alt="Award 1" />
+                <img src="./assets/img/diplomaSecond.png" alt="Award 2" />
             </div>
         </section>
 
@@ -670,7 +683,7 @@
 
         <section class="contact">
             <div class="background-img-wrap">
-                <img class="background-img" src="./img/contactUs.png" alt="preview" />
+                <img class="background-img" src="./assets/img/contactUs.png" alt="preview" />
             </div>
             <div class="text">
                 <h2 class="title">Свяжитесь с Core Soft</h2>
@@ -692,14 +705,14 @@
         </div>
 
         <div class="social-icons">
-            <a >
+            <a>
                 <svg viewBox="0 0 34 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M33.4213 3.15723L28.3768 26.9792C28.0274 28.6706 27.0079 29.0756 25.5833 28.2932L17.8979 22.6055L14.181 26.1967C13.7615 26.6162 13.412 26.9792 12.644 26.9792C11.638 26.9792 11.8051 26.6023 11.47 25.6528L8.81576 17.002L1.20041 14.6274C-0.448773 14.1388 -0.462199 13.0073 1.56334 12.1827L31.2692 0.72477C32.6255 0.124742 33.9244 1.06018 33.407 3.14231L33.4213 3.15547V3.15723Z"
                         fill="currentColor" />
                 </svg>
             </a>
-            <a >
+            <a>
                 <svg viewBox="0 0 34 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M24.4711 20.956C24.0561 20.7485 22.0145 19.7453 21.6345 19.6051C21.2528 19.4668 20.9761 19.398 20.6985 19.8148C20.4228 20.2298 19.6269 21.1645 19.3853 21.4411C19.1428 21.7196 18.9003 21.753 18.4853 21.5464C18.0703 21.3371 16.7319 20.8997 15.1456 19.485C13.9123 18.3846 13.0778 17.0245 12.8362 16.6087C12.5936 16.1937 12.811 15.9679 13.0176 15.7613C13.2045 15.5753 13.4344 15.2766 13.641 15.035C13.8494 14.7924 13.9177 14.6178 14.0569 14.3402C14.1952 14.0636 14.127 13.8223 14.0219 13.6139C13.9177 13.4055 13.0877 11.3606 12.7427 10.5297C12.4041 9.72128 12.0619 9.8309 11.8077 9.81743C11.5651 9.80575 11.2894 9.80339 11.0109 9.80339C10.7343 9.80339 10.2843 9.90678 9.90436 10.3236C9.5244 10.7386 8.45096 11.7423 8.45096 13.7867C8.45096 15.8293 9.93932 17.8039 10.1459 18.0823C10.3543 18.359 13.0743 22.5533 17.2403 24.3525C18.0131 24.6858 18.8032 24.9769 19.6072 25.2253C20.6025 25.5424 21.5078 25.4971 22.221 25.3894C23.0196 25.2708 24.6777 24.3858 25.0236 23.4157C25.3712 22.4456 25.3712 21.6145 25.2661 21.4411C25.1628 21.2677 24.887 21.1644 24.4711 20.956ZM16.8954 31.2999H16.8891C14.4163 31.2999 11.9882 30.6356 9.85941 29.3753L9.35546 29.0762L4.12772 30.4481L5.52267 25.3508L5.19394 24.828C3.81159 22.6262 3.08038 20.0786 3.08484 17.4788C3.08574 9.8635 9.28274 3.6683 16.8999 3.6683C20.5899 3.6683 24.0571 5.10712 26.6647 7.71743C27.9511 8.99824 28.9708 10.5215 29.6647 12.199C30.3585 13.8765 30.7127 15.6749 30.7068 17.4902C30.7032 25.1047 24.5071 31.2999 16.8954 31.2999ZM28.6507 5.73409C27.1112 4.18441 25.2794 2.95581 23.2615 2.11918C21.2436 1.28255 19.0798 0.854723 16.8954 0.860407C7.73596 0.860407 0.28142 8.31585 0.277827 17.478C0.277827 20.4062 1.04131 23.2645 2.49647 25.7841L0.137695 34.3955L8.94767 32.0841C11.3839 33.4112 14.1139 34.1066 16.8881 34.1069H16.8954C26.053 34.1069 33.5084 26.6524 33.5129 17.4894C33.5197 15.3058 33.0935 13.1431 32.259 11.1253C31.4244 9.10755 30.198 7.27485 28.6507 5.73409Z"
@@ -723,6 +736,7 @@
         </div>
     </footer>
     <script src="script.js"></script>
+
 </body>
 
 </html>
