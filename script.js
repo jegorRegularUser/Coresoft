@@ -1,4 +1,4 @@
-function moveSlides(carouselId, direction) {
+const moveSlides = (carouselId, direction) => {
   const sliderContainer = document.getElementById(`${carouselId}-slider`);
   const slides = sliderContainer?.querySelector(".slides");
   const totalSlides = slides?.querySelectorAll(".slide").length;
@@ -31,3 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 5000);
   });
 });
+
+const formBtn = document.getElementById('formBtn');
+formBtn.addEventListener('click', e => {e.preventDefault()});
