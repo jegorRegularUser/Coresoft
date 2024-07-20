@@ -14,6 +14,8 @@
     --gray: #ccc;
     --background-gray: #F5F5F5;
     --font-gray: #5e5e5e;
+
+    scroll-behavior: smooth;
 }
 
 *,
@@ -28,68 +30,419 @@ body {
     min-width: 400px;
 }
 
-/* 
-@media(min-width:1401px){
+@media (min-width:1201px) {
 
-}
-@media (min-width: 1201px) and (max-width: 1400px) {
-    :root{
-        font-size: 15px;
+    /* header */
+    /* Preview */
+    /*business-solutions  */
+    .hardware {
+        margin: 0 270px 0 0;
     }
 
-}
-
-@media (min-width: 768px) and (max-width: 1200px){
-    :root{
-        font-size: 15px;
+    /* services */
+    /*IT Infrastructure  */
+    /*Custom Solutions  */
+    .custom-solutions .text {
+        max-width: 60%;
+        text-align: left;
     }
 
-   
-
-
+    /*Automation  */
+    /*Trust  */
+    /* Cases */
+    /* Advantages */
+    /*  Reviews*/
+    /*Awards  */
+    /* Why Choose Us */
+    /*  Contact*/
+    /*footer  */
 }
-@media (min-width: 576px) and (max-width: 767px){
-    :root{
-        font-size: 12px;
+
+@media(max-width:1200px) {
+
+    /* header */
+    /* Preview */
+    /*business-solutions  */
+    .business-solutions {
+        align-items: center;
+        padding: 0 50px;
     }
 
+    .hardware {
+        margin: 0 140px 0 0;
+    }
+
+    /* services */
+    /*IT Infrastructure  */
+    /*Custom Solutions  */
+    .custom-solutions .content {
+        flex-wrap: wrap;
+        text-align: center;
+
+    }
+    .custom-solutions ul {
+        justify-content: center;
+    }
+    .custom-solutions .text {
+        max-width: 100%;
+    }
+
+    /*Automation  */
+    /*Trust  */
+    /* Cases */
+    /* Advantages */
+    /*  Reviews*/
+    /*Awards  */
+    /* Why Choose Us */
+    /*  Contact*/
+    /*footer  */
+
+
 }
-@media (max-width: 575px){
-    :root{
-        font-size: 10px;
+
+@media(max-width:992px) {
+
+    /* header */
+    /* Preview */
+    /*business-solutions  */
+    .business-solutions {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        text-align: center;
+        align-items: flex-start;
+    }
+
+    .business-solutions .content {
+        max-width: 505px;
+        margin: 0 auto 50px;
+    }
+
+    /* services */
+    .services {
+        padding: 40px 0 50px;
+    }
+
+    .services-list {
+        justify-content: center;
+        padding: 20px;
+    }
+
+    /*IT Infrastructure  */
+    /*Custom Solutions  */
+    /*Automation  */
+    /*Trust  */
+    /* Cases */
+    /* Advantages */
+    /*  Reviews*/
+    /*Awards  */
+    /* Why Choose Us */
+    /*  Contact*/
+    /*footer  */
+
+
+}
+
+@media (min-width: 769px) {
+
+    /* general */
+    .title {
+        font-size: 48px;
+    }
+
+    .btn {
+        font-size: 20px;
+    }
+
+    .white-btn {
+        font-size: 20px;
+    }
+
+    /* header */
+
+
+    .nav__list {
+        display: flex;
+    }
+
+    .nav__item {
+        margin-right: 60px;
+    }
+
+    .nav__toggle {
+        display: none;
+    }
+
+    /* Preview */
+
+    .desc {
+        font-size: 26px;
+    }
+
+    /*business-solutions  */
+    .hardware-main {
+
+        width: 420px;
+        height: 500px;
+
+    }
+
+    .hardware-side {
+        width: 305px;
+        height: 305px;
+        bottom: -20%;
+        right: -30%;
+    }
+
+    /* services */
+    .services {
+        padding: 120px 0 130px;
+    }
+
+    .service {
+        width: max-content;
+    }
+
+    /*IT Infrastructure  */
+    .it-infrastructure .title {
+        margin-bottom: 96px;
+    }
+
+    .slides__mobile {
+        display: none;
+    }
+
+    .slider-container {
+        display: block;
+    }
+
+    /*Custom Solutions  */
+    .custom-solutions li {
+        max-width: calc(50% - 28px);
+    }
+    .custom-solutions {
+        padding: 122px 0 200px;
+    }
+    .custom-solutions .text {
+        gap: 30px;
+    }
+    /*Automation  */
+    .automation .content {
+        max-width: 50%;
+    }
+    /*Trust  */
+    /* Cases */
+    /* Advantages */
+    /*  Reviews*/
+    /*Awards  */
+    /* Why Choose Us */
+    /*  Contact*/
+    /*footer  */
+
+
+}
+
+@media (max-width: 768px) {
+
+    /* general */
+    .title {
+        font-size: 40px;
+    }
+
+    .btn {
+        font-size: 18px;
+    }
+
+    .white-btn {
+        font-size: 18px;
+    }
+
+    /* header */
+
+    .nav__toggle {
+        display: block;
+    }
+
+    .nav__list {
+        display: none;
+    }
+
+    .nav.is-open .nav__item {
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 
 
-} */
 
-header {
-    background-color: rgba(0, 0, 0, 0.9);
-    position: fixed;
+    .nav__dropdown-item {
+        margin-bottom: 20px;
+    }
 
-    padding: 15px 5vw;
-    min-width: 100vw;
+    /* Preview */
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 3;
+    .desc {
+        font-size: 20px;
+    }
+
+    /*business-solutions  */
+
+    .business-solutions {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        text-align: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .hardware {
+        margin: 0;
+    }
+
+    .hardware-main {
+        width: 370px;
+        height: 450px;
+    }
+
+    .hardware-side {
+        width: 255px;
+        height: 255px;
+        bottom: -20%;
+        right: 15%;
+    }
+
+
+
+    /* services */
+    .services {
+        padding: 60px 20px;
+    }
+
+    .services-list {
+        margin: 0;
+        padding: 0 20px;
+    }
+
+    .service {
+        width: 100%;
+    }
+
+    /*IT Infrastructure  */
+    .it-infrastructure {
+        padding: 0 20px;
+    }
+
+    .it-infrastructure .title {
+        margin-bottom: 46px;
+    }
+
+    .slides__mobile {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .slide__mobile {
+        max-width: calc(50% - 25px);
+        border-radius: 1rem;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+
+    .slide__mobile img {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .slider-container {
+        display: none;
+    }
+
+    /*Custom Solutions  */
+    .custom-solutions {
+        background-color: var(--background-gray);
+        padding: 61px 0 100px;
+    }
+    .custom-solutions .image {
+        display: none;
+    }
+    .custom-solutions li {
+        max-width: none;
+    }
+    .custom-solutions .text {
+        gap: 0;
+    }
+    /*Automation  */
+    .automation .content {
+        max-width: 80%;
+    }
+    /*Trust  */
+    .trust{
+        padding: 0 20px;
+    }
+    /* Cases */
+    /* Advantages */
+    /*  Reviews*/
+    /*Awards  */
+    /* Why Choose Us */
+    /*  Contact*/
+    /*footer  */
+
+
+
 }
 
+@media (max-width: 480px) {
+
+    /* general */
+    .title {
+        font-size: 37px;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+
+    .white-btn {
+        font-size: 16px;
+    }
+
+    /* header */
+    /* Preview */
+    .desc {
+        font-size: 18px;
+    }
+
+    /*business-solutions  */
+    /* services */
+    /*IT Infrastructure  */
+
+    .slide__mobile {
+        max-width: 100%;
+        min-width: 80%;
+    }
+
+    /*Custom Solutions  */
+    /*Automation  */
+    /*Trust  */
+    /* Cases */
+    /* Advantages */
+    /*  Reviews*/
+    /*Awards  */
+    /* Why Choose Us */
+    /*  Contact*/
+    /*footer  */
+
+
+}
+
+/* general */
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-header ul {
-    width: 30%;
-    display: flex;
-    justify-content: end;
-}
-
-header li {
-    margin-right: 60px;
-    color: white;
 }
 
 a {
@@ -105,19 +458,6 @@ a {
     height: 27px;
 
 }
-
-
-
-.preview {
-    text-align: center;
-    color: white;
-    height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 
 .background-img-wrap::after {
     content: '';
@@ -140,25 +480,6 @@ a {
     z-index: -1;
 }
 
-.preview-content {
-    max-width: 900px;
-}
-
-.title {
-    font-size: 48px;
-    margin: 0;
-}
-
-.preview-content .title {
-    max-width: 650px;
-    margin: 0 auto;
-}
-
-.desc {
-    font-size: 26px;
-
-}
-
 .btn {
     background-color: var(--purple);
     color: white;
@@ -167,7 +488,6 @@ a {
     cursor: pointer;
     border-radius: 1rem;
     transition: all ease 0.5s;
-    font-size: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -194,7 +514,6 @@ a {
     border-radius: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    font-size: 20px;
 }
 
 .btn-white:hover {
@@ -209,6 +528,145 @@ a {
     color: var(--light-purple);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     transform: translateY(0px);
+}
+
+/* Animations  */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes goLeft {
+    0% {
+        transform: translateX(200px);
+
+    }
+
+    100% {
+        transform: translateX(0px);
+
+    }
+}
+
+@keyframes goRight {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(200px);
+
+    }
+}
+
+@keyframes hoverAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.04);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* header */
+
+.header {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    padding: 15px 5vw;
+    min-width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav__item {
+    color: white;
+}
+
+.nav__toggle {
+    background: none;
+
+    padding: 0;
+    cursor: pointer;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.nav__dropdown {
+    position: absolute;
+    display: none;
+    top: 100%;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 0 20px;
+    z-index: 2;
+    color: white;
+    font-size: 24px;
+}
+
+.nav__dropdown.show {
+    animation: goLeft 0.5s ease;
+}
+
+.nav__dropdown.hide {
+    animation: goRight 0.5s ease;
+}
+
+
+
+
+/* Preview */
+.preview {
+    text-align: center;
+    color: white;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.preview-content {
+    max-width: 900px;
+}
+
+.preview-content .title {
+    max-width: 650px;
+    margin: 0 auto;
 }
 
 .preview .arrow {
@@ -230,71 +688,72 @@ a {
 
 
 
-
-
+/*business-solutions  */
 .business-solutions {
     display: flex;
+
     justify-content: center;
     align-items: center;
-    padding: 140px 0 260px;
     max-width: 1300px;
-    margin: 0 auto;
+    margin: 150px auto 250px;
 }
 
 .hardware {
     max-width: 550px;
     position: relative;
-    margin-right: 270px;
+
 }
 
 .hardware .title {
-    font-size: 40px;
+
     background-color: white;
     border-radius: 6px;
     color: var(--purple);
     position: absolute;
     padding: 1rem 0.5rem;
     top: 2rem;
-    left: 25%
+    left: 20%;
+    width: 60%;
+    z-index: 1;
+}
+
+.hardware-main {
+    position: relative;
 }
 
 .hardware-main {
     border-radius: 1rem;
-    width: 420px;
-    height: 500px;
+
     object-fit: cover;
 }
 
 .hardware-side {
-    width: 305px;
-    height: 305px;
+
     object-fit: cover;
     border-radius: 1rem;
     position: absolute;
-    bottom: -20%;
-    right: -30%;
+
 }
 
 .business-solutions .content {
-    max-width: 580px;
-}
-
-.business-solutions .desc {
-    font-size: 20px;
+    max-width: 505px;
 }
 
 
 
 
+
+
+/* services */
 .services {
     background-color: var(--background-gray);
-    padding: 120px 0 130px;
     text-align: center;
 }
 
 .services-list {
     display: flex;
     flex-wrap: wrap;
+
     max-width: 1050px;
     margin: 53px auto 127px;
     gap: 40px;
@@ -306,7 +765,6 @@ a {
     padding: 20px 30px;
     border-radius: 1.5rem;
     margin-bottom: -10px;
-    width: max-content;
     display: flex;
     text-align: left;
     align-items: center;
@@ -330,15 +788,11 @@ a {
 
 
 
-
+/*IT Infrastructure  */
 
 .it-infrastructure {
     margin: 93px 0 159px;
     text-align: center;
-}
-
-.it-infrastructure .title {
-    margin-bottom: 96px;
 }
 
 .slider-container {
@@ -368,6 +822,7 @@ a {
 }
 
 .slide img {
+    object-fit: cover;
     width: 100%;
 }
 
@@ -404,27 +859,22 @@ a {
 
 
 
+/*Custom Solutions  */
 
 .custom-solutions {
     background-color: var(--background-gray);
-    padding: 122px 0 200px;
 }
 
 .custom-solutions .content {
     display: flex;
-
     margin: 0 auto;
     gap: 100px;
     width: calc(75% - 100px);
-
 }
 
 .custom-solutions .text {
-    max-width: 60%;
-    text-align: left;
     display: flex;
     flex-direction: column;
-    gap: 30px;
     font-size: 21px;
 }
 
@@ -437,16 +887,14 @@ a {
 .custom-solutions li {
     border: 1px solid var(--light-gray);
 
-    max-width: calc(50% - 28px);
+    min-width: 250px;
     padding: 10px 14px;
     border-radius: 0.5rem;
     margin-bottom: -10px;
     width: max-content;
     display: flex;
-    text-align: left;
     align-items: center;
     gap: 0.75rem;
-    font-size: 16px;
 }
 
 .custom-solutions .image {
@@ -464,6 +912,7 @@ a {
 
 
 
+/*Automation  */
 
 .automation {
     padding: 40px 20px;
@@ -476,11 +925,12 @@ a {
     justify-content: center;
 }
 
-.automation .content {
-    max-width: 50%;
-}
 
 
+
+
+
+/*Trust  */
 
 .trust {
     margin: 90px 0 150px;
@@ -499,6 +949,9 @@ a {
 }
 
 
+
+
+/* Cases */
 
 .cases {
     max-width: 1200px;
@@ -590,8 +1043,6 @@ a {
     z-index: 1;
 }
 
-
-
 .modal {
     display: none;
     position: fixed;
@@ -602,7 +1053,6 @@ a {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
-    animation: fadeIn 0.5s ease-in-out;
 }
 
 .modal.show {
@@ -612,26 +1062,6 @@ a {
 
 .modal.hide {
     animation: fadeOut 0.5s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
 }
 
 .modal ul {
@@ -667,6 +1097,7 @@ a {
 
 
 
+/* Advantages */
 
 .advantages {
     background-color: #f8f8f8;
@@ -715,12 +1146,13 @@ a {
 
 
 
+/*  Reviews*/
 
 .reviews {
     padding: 100px 20px;
     margin: 30px auto 120px;
     max-width: 1200px;
-
+    word-break: normal
 }
 
 .reviews .text {
@@ -772,6 +1204,9 @@ a {
 
 
 
+
+/*Awards  */
+
 .awards {
     background-color: var(--background-gray);
     padding: 90px 100px;
@@ -796,6 +1231,8 @@ a {
 
 
 
+
+/* Why Choose Us */
 
 .why-choose-us {
     margin: 150px auto;
@@ -851,8 +1288,9 @@ a {
     color: var(--font-gray)
 }
 
-
 .reasons .circle {
+    min-width: 70px;
+    min-height: 70px;
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -878,6 +1316,8 @@ a {
 
 
 
+
+/*  Contact*/
 .contact {
     position: relative;
     width: 100%;
@@ -921,22 +1361,6 @@ button {
     padding: 9px;
 }
 
-
-
-@keyframes hoverAnimation {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.04);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
 .contact .btn {
     font-size: 18px;
 
@@ -944,6 +1368,8 @@ button {
 
 
 
+
+/*footer  */
 .contact-section {
     text-align: center;
     padding: 70px 20px;

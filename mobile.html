@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header class="sec">
+    <header class="header">
         <div class="logo">
             <a href="#preview">
                 <svg height="3rem" viewBox="0 0 168 53" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,14 +45,29 @@
                 </svg>
             </a>
         </div>
-        <ul>
-            <li><a href="#services">Услуги</a></li>
-            <li><a href="#cases">Кейсы</a></li>
-            <li><a href="#reviews">Отзывы</a></li>
-            <li><a href="#contacts">Контакты</a></li>
-        </ul>
+        <nav class="nav">
+            <button class="nav__toggle" type="button">
+                <span class="nav__toggle-icon">☰</span>
+            </button>
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#services">Услуги</a></li>
+                <li class="nav__item"><a href="#cases">Кейсы</a></li>
+                <li class="nav__item"><a href="#reviews">Отзывы</a></li>
+                <li class="nav__item"><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="nav__dropdown">
+            <ul class="nav__dropdown-list">
+                <li class="nav__dropdown-item"><a href="#services">Услуги</a></li>
+                <li class="nav__dropdown-item"><a href="#cases">Кейсы</a></li>
+                <li class="nav__dropdown-item"><a href="#reviews">Отзывы</a></li>
+                <li class="nav__dropdown-item"><a href="#contacts">Контакты</a></li>
+            </ul>
+        </div>
     </header>
     <main>
+
+        <!--     Preview     -->
         <section class="preview" id="preview">
             <div class="background-img-wrap">
                 <img class="background-img" src="./assets/img/preview.png" alt="preview" />
@@ -76,11 +91,17 @@
             </button>
         </section>
 
+
+        <!--business-solutions-->
         <section class="business-solutions" id="solutions">
             <div class="hardware">
-                <img class="hardware-main" src="./assets/img/hardware.png" alt="Hardware" />
+                <div class="hardware-main-wrap">
+                    <h2 class="title">Hardware</h2>
+                    <img class="hardware-main" src="./assets/img/hardware.png" alt="Hardware" />
+                </div>
+                
                 <img class="hardware-side" src="./assets/img/hardwareSide.png" alt="side-Hardware" />
-                <h2 class="title">Hardware</h2>
+                
             </div>
 
             <div class="content">
@@ -93,6 +114,7 @@
             </div>
         </section>
 
+        <!--   services    -->
         <section class="services" id="services">
             <h2 class="title">Наши услуги</h2>
             <div class="services-list">
@@ -201,7 +223,7 @@
             </div>
         </section>
 
-        <!-- IT Infrastructure Section -->
+        <!-- IT Infrastructure  -->
         <section class="it-infrastructure">
             <h1 class="title">IT инфраструктура из free software «под ключ»</h1>
             <div class="slider-container" id="it-infrastructure-slider">
@@ -219,8 +241,17 @@
                 <button class="prev carousal-btn" onclick="moveSlides('it-infrastructure', -1)">&#10094;</button>
                 <button class="next carousal-btn" onclick="moveSlides('it-infrastructure', 1)">&#10095;</button>
             </div>
+            <div class="slides__mobile" id="it-infrastructure-slides">
+                <div class="slide__mobile"><img src="./assets/img/lock-company.png" alt="Image 1" /></div>
+                <div class="slide__mobile"><img src="./assets/img/myOffice.png" alt="Image 2" /></div>
+                <div class="slide__mobile"><img src="./assets/img/alt.png" alt="Image 3" /></div>
+                <div class="slide__mobile"><img src="./assets/img/astra.png" alt="Image 4" /></div>
+                <div class="slide__mobile"><img src="./assets/img/lock-company.png" alt="Image 5" /></div>
+                <div class="slide__mobile"><img src="./assets/img/lock-company.png" alt="Image 6" /></div>
+                <div class="slide__mobile"><img src="./assets/img/lock-company.png" alt="Image 7" /></div>
+            </div>
         </section>
-        <!-- Custom Solutions Section -->
+        <!-- Custom Solutions  -->
         <section class="custom-solutions">
 
             <div class="content">
@@ -306,7 +337,7 @@
             </div>
         </section>
 
-        <!-- Automation Section -->
+        <!-- Automation  -->
         <section class="automation">
             <div class="background-img-wrap">
                 <img class="background-img" src="./assets/img/autocity.png" alt="autocity" />
@@ -319,7 +350,7 @@
             </div>
         </section>
 
-        <!-- Trust Section -->
+        <!-- Trust  -->
         <section class="trust">
             <div class="text">
                 <h1 class="title">Нам доверяют</h1>
@@ -340,10 +371,19 @@
                 <button class="prev carousal-btn" onclick="moveSlides('trust', -1)">&#10094;</button>
                 <button class="next carousal-btn" onclick="moveSlides('trust', 1)">&#10095;</button>
             </div>
+            <div class="slides__mobile" id="trust-slides">
+                <div class="slide__mobile"><img src="./assets/img/stavropol.png" alt="Image 1" /></div>
+                <div class="slide__mobile"><img src="./assets/img/vologod.png" alt="Image 2" /></div>
+                <div class="slide__mobile"><img src="./assets/img/zabalkask.png" alt="Image 3" /></div>
+                <div class="slide__mobile"><img src="./assets/img/neneck.png" alt="Image 4" /></div>
+                <div class="slide__mobile"><img src="./assets/img/ingishetia.png" alt="Image 5" /></div>
+                <div class="slide__mobile"><img src="./assets/img/kostroms.png" alt="Image 6" /></div>
+                <div class="slide__mobile"><img src="./assets/img/magadan.png" alt="Image 7" /></div>
+            </div>
         </section>
 
 
-
+        <!--        cases       -->
         <section class="cases" id="cases">
             <div class="case-list">
                 <h1 class="title">Наши кейсы</h1>
@@ -534,7 +574,9 @@
                         <h3>Результаты:</h3>
                         <ul id="modal-results"></ul>
                         <div class="modal-buttons">
-                            <a class="btn download-button"><div class="pdf-icon"></div>Скачать</a>
+                            <a class="btn download-button">
+                                <div class="pdf-icon"></div>Скачать
+                            </a>
                             <button class="btn btn-white close-button">Закрыть</button>
                         </div>
                     </div>
@@ -546,7 +588,7 @@
 
 
 
-        <!-- Advantages Section -->
+        <!-- Advantages  -->
         <section class="advantages">
             <h2 class="title">Преимущества нашей компании</h2>
             <div class="advantages-list">
@@ -602,7 +644,7 @@
 
 
 
-        <!-- Reviews Section -->
+        <!-- Reviews  -->
         <section class="reviews" id="reviews">
             <div class="text">
                 <h2 class="title">Отзывы о нас</h2>
@@ -636,7 +678,7 @@
             </div>
         </section>
 
-        <!-- Awards Section -->
+        <!-- Awards  -->
         <section class="awards">
             <h2 class="title">Наши награды</h2>
             <div class="awards-list">
@@ -645,7 +687,7 @@
             </div>
         </section>
 
-        <!-- Why Choose Us Section -->
+        <!-- Why Choose Us  -->
         <section class="why-choose-us">
             <div class="text">
                 <h2 class="title">Почему выбирают Core Soft?</h2>
@@ -679,8 +721,7 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
-
+        <!-- Contact  -->
         <section class="contact">
             <div class="background-img-wrap">
                 <img class="background-img" src="./assets/img/contactUs.png" alt="preview" />
@@ -698,6 +739,8 @@
             </form>
         </section>
     </main>
+
+    <!--        footer       -->
     <footer class="contact-section" id="contacts">
         <div class="text">
             <h2 class="title">Контактные данные</h2>

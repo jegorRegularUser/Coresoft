@@ -1,3 +1,25 @@
+const navToggle = document.querySelector(".nav__toggle");
+const nav = document.querySelector(".nav");
+const navDropdown = document.querySelector(".nav__dropdown");
+let isDropDownOpen = false;
+
+const dropDownHandler = () => {
+  isDropDownOpen = !isDropDownOpen;
+  if (!isDropDownOpen) {
+    navDropdown.classList.add("hide");
+    navDropdown.classList.remove("show");
+    setTimeout(() => {
+      navDropdown.style.display = "none";
+    }, 400);
+  } else {
+    navDropdown.style.display = "block";
+    navDropdown.classList.add("show");
+    navDropdown.classList.remove("hide");
+  }
+};
+
+navToggle.addEventListener("click", dropDownHandler);
+
 const moveSlides = (carouselId, direction) => {
   const sliderContainer = document.getElementById(`${carouselId}-slider`);
   const slides = sliderContainer?.querySelector(".slides");
@@ -39,7 +61,6 @@ readMoreButtons.forEach((button) => {
     modal.classList.remove("hide");
     modal.classList.add("show");
 
-
     const caseElement = button.parentElement;
     modalTitle.textContent = caseElement.querySelector("h2").textContent;
     modalDescription.textContent = caseElement.querySelector("p").textContent;
@@ -72,7 +93,7 @@ readMoreButtons.forEach((button) => {
   });
 });
 const closeModal = () => {
-    modal.classList.add("hide");
+  modal.classList.add("hide");
 
   modal.classList.remove("show");
   setTimeout(() => {
@@ -93,10 +114,13 @@ downloadButton.addEventListener("click", () => {
     "download",
     `${modalTitle.textContent.substring(0, 7)}.pdf`
   );
-  closeModal()
+  closeModal();
 });
 
 window.addEventListener("click", (event) => {
+  if (( !nav.contains(event.target) || event.target.localName === 'a') && isDropDownOpen) {
+    dropDownHandler();
+  }
   if (event.target == modal) {
     closeModal();
   }
