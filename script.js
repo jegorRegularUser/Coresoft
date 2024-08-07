@@ -17,8 +17,8 @@ const dropDownHandler = () => {
     navDropdown.classList.remove("hide");
   }
 };
-
 navToggle.addEventListener("click", dropDownHandler);
+
 
 const moveSlides = (carouselId, direction) => {
   const sliderContainer = document.getElementById(`${carouselId}-slider`);
@@ -78,6 +78,7 @@ const initPagination = (carouselId) => {
   updatePagination(carouselId, 0);
 };
 initPagination('trust');
+
 
 
 const caseContainer = document.querySelector('.case-list');
@@ -176,28 +177,10 @@ downloadButton.addEventListener("click", () => {
 });
 
 
-const formBtn = document.getElementById("formBtn");
-formBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-});
-
-window.addEventListener("click", (event) => {
-  if (
-    (!nav.contains(event.target) || event.target.localName === "a") &&
-    isDropDownOpen
-  ) {
-    dropDownHandler();
-  }
-  if (event.target == contactModal || event.target == casesModal) {
-    closeCasesModal();
-    closeContactModal();
-  }
-});
 
 const contactModal = document.querySelector(".contact .modal")
 const contactBtn_pre = document.getElementById("contact-btn-pre")
 const contactBtn_sol = document.getElementById("contact-btn-sol")
-const modalFormBtn = document.getElementById("modalFormBtn")
 
 const closeContactModal = () => {
   contactModal.classList.add("hide");
@@ -214,7 +197,29 @@ const closeContactModal = () => {
   contactModal.style.display = "block";
 }))
 
+
+
+const modalFormBtn = document.getElementById("modalFormBtn")
 modalFormBtn.addEventListener("click", (e) => {
   e.preventDefault();
   closeContactModal();
+});
+
+const formBtn = document.getElementById("formBtn");
+formBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+});
+
+
+window.addEventListener("click", (event) => {
+  if (
+    (!nav.contains(event.target) || event.target.localName === "a") &&
+    isDropDownOpen
+  ) {
+    dropDownHandler();
+  }
+  if (event.target == contactModal || event.target == casesModal) {
+    closeCasesModal();
+    closeContactModal();
+  }
 });
