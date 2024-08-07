@@ -197,7 +197,7 @@ window.addEventListener("click", (event) => {
 const contactModal = document.querySelector(".contact .modal")
 const contactBtn_pre = document.getElementById("contact-btn-pre")
 const contactBtn_sol = document.getElementById("contact-btn-sol")
-
+const modalFormBtn = document.getElementById("modalFormBtn")
 
 const closeContactModal = () => {
   contactModal.classList.add("hide");
@@ -207,8 +207,14 @@ const closeContactModal = () => {
     contactModal.style.display = "none";
   }, 500);
 };
+
 [contactBtn_pre, contactBtn_sol].forEach(el=>el.addEventListener("click", () => {
   contactModal.classList.remove("hide");
   contactModal.classList.add("show");
   contactModal.style.display = "block";
 }))
+
+modalFormBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  closeContactModal();
+});
