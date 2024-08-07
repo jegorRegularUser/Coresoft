@@ -69,6 +69,10 @@ body {
         margin: 15% auto;
     }
 
+    .contact .modal-content {
+        width: 80%;
+    }
+
     /* Advantages */
     /*  Reviews*/
     /*Awards  */
@@ -130,6 +134,11 @@ body {
 
     .modal-content {
         width: 70%;
+        margin: 15% auto;
+    }
+
+    .contact .modal-content {
+        width: 80%;
     }
 
     /* Advantages */
@@ -175,7 +184,10 @@ body {
     /* Cases */
     .modal-content {
         width: 80%;
-        margin: 15% auto;
+    }
+
+    .contact .modal-content {
+        width: 90%;
     }
 
     /* Advantages */
@@ -297,28 +309,23 @@ body {
         width: 100%;
     }
 
-    .modal-buttons {
+    .cases .modal-buttons {
         justify-content: space-between;
     }
 
-    .modal-buttons .btn {
+    .cases .modal-buttons .btn {
         width: 40%;
     }
 
     /* Advantages */
-    .advantages {
-        padding: 160px 30px;
-    }
 
     .advantages-list {
-        justify-content: space-around;
-        align-items: center;
-        margin: 3rem auto 0;
-
-    }
-
-    .advantage {
-        max-width: 30%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+        "icon1 icon2 icon3"
+        "h1 h2 h3"
+        "p1 p2 p3"
     }
 
     /*  Reviews*/
@@ -531,31 +538,31 @@ body {
         width: 90%;
     }
 
-    .modal-buttons {
+    .cases .modal-buttons {
         justify-content: space-between;
     }
 
-    .modal-buttons .btn {
+    .cases .modal-buttons .btn {
         width: calc(50% - 12px);
     }
 
     /* Advantages */
-    .advantages {
-        padding: 80px 20px;
-    }
 
     .advantages-list {
-        justify-content: space-around;
-        align-items: center;
-        margin: 3rem auto 0;
-        flex-direction: column;
-        gap: 30px;
-
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr);
+        grid-template-areas:
+        "icon1"
+        "h1"
+        "p1"
+        "icon2"
+        "h2"
+        "p2"
+        "icon3"
+        "h3"
+        "p3";
     }
 
-    .advantage {
-        max-width: 70%;
-    }
 
     /*  Reviews*/
     .reviews-list {
@@ -641,13 +648,19 @@ body {
         margin: 0;
     }
 
-    .modal-buttons {
+    .contact .modal-content {
+        width: 100%;
+
+        margin: 15% 0;
+    }
+
+    .cases .modal-buttons {
         align-items: center;
         flex-direction: column;
         gap: 16px;
     }
 
-    .modal-buttons .btn {
+    .cases .modal-buttons .btn {
         width: calc(100% - 12px);
     }
 
@@ -724,6 +737,7 @@ a {
     transition: all ease 0.5s;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-weight: 500;
+
 }
 
 .btn:hover {
@@ -781,6 +795,33 @@ a {
     border-radius: 0.5rem;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 5;
+}
+
+.modal.show {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.modal.hide {
+    animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+.modal-content {
+    background-color: #ffffff;
+
+    padding: 5px 20px 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+}
 
 /* header */
 
@@ -1142,8 +1183,6 @@ a {
     border-radius: 2px;
     background-color: var(--light-gray);
     margin: 0 5px;
-    cursor: pointer;
-    transition: background-color ease 0.5s;
 }
 
 .pagination-item.active {
@@ -1159,6 +1198,7 @@ a {
     margin: 0 auto 200px;
 }
 
+
 .case-list h1 {
     text-align: center;
     margin-bottom: 50px;
@@ -1172,6 +1212,29 @@ a {
 
 .case-image {
     border: 1px solid var(--light-gray);
+    border-radius: 10px;
+}
+
+.case-list {
+    position: relative;
+    max-height: 700px;
+    overflow: hidden;
+    padding: 0 0 60px;
+}
+
+.case-list .btn {
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 90px);
+}
+
+.case-list .light-shadow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(to top, #ffffff 40%, transparent 100%);
     border-radius: 10px;
 }
 
@@ -1236,40 +1299,15 @@ a {
     z-index: 1;
 }
 
-.modal {
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-}
 
-.modal.show {
-    display: block;
-    animation: fadeIn 0.5s ease-in-out;
-}
 
-.modal.hide {
-    animation: fadeOut 0.5s ease-in-out forwards;
-}
-
-.modal ul {
+.cases .modal ul {
     list-style: disc;
     padding-left: 20px;
     line-height: 1.5;
 }
 
-.modal-content {
-    background-color: #ffffff;
-
-    padding: 5px 20px 20px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 1rem;
-}
-
-.modal-buttons .btn {
+.cases .modal-buttons .btn {
     display: flex;
     justify-content: center;
 
@@ -1277,7 +1315,7 @@ a {
     gap: 0.75rem;
 }
 
-.modal-buttons {
+.cases .modal-buttons {
     display: flex;
     margin-top: 20px;
 }
@@ -1288,14 +1326,18 @@ a {
 .advantages {
     background-color: #f8f8f8;
     text-align: center;
+    padding: 130px 20px;
 }
 
 .advantages-list {
-    display: flex;
+    display: grid;
     max-width: 1200px;
+    grid-gap: 25px;
+    margin: 48px auto 0;
 }
 
 .advantages-list .icon {
+
     width: 80px;
     height: 80px;
     padding: 20px;
@@ -1305,19 +1347,25 @@ a {
 }
 
 .advantages-list h3 {
+
     font-size: 25px;
     font-weight: 500;
+    margin: 0;
 }
 
 .advantages-list p {
+
     margin: 0;
     color: var(--font-gray);
 }
 
 .advantage {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: flex-start;
+
+
 }
 
 .advantage img {
@@ -1539,15 +1587,35 @@ button {
     padding: 8px;
 }
 
-
 .contact input:hover {
     animation: hoverAnimation 0.5s ease-in-out;
     border: 1px solid var(--light-purple);
     padding: 9px;
 }
 
+.contact .modal-content {
+    padding: 120px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.contact .modal-content form {
+    justify-content: center;
+}
 
+.contact .modal-content input {
+    border: 2px solid var(--light-gray);
+}
+
+.contact .modal-content .text {
+    color: #000000;
+}
+
+.contact .modal-content p {
+    color: #000000;
+}
 
 /*footer  */
 .contact-section {

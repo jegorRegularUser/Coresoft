@@ -36,6 +36,7 @@ const moveSlides = (carouselId, direction) => {
   }
 
   const translateX = -currentIndex * 25 + "%";
+  slides.style.transition = 'transform 0.5s ease-in-out';
   slides.style.transform = `translateX(${translateX})`;
 
   sliderContainer.dataset.currentIndex = currentIndex;
@@ -55,6 +56,8 @@ const updatePagination = (carouselId, currentIndex) => {
     paginationItem.classList.add("pagination-item");
     if (i >= currentIndex && i < currentIndex + 4) {
       paginationItem.classList.add("active");
+    } else {
+      paginationItem.classList.remove('active');
     }
     pagination.appendChild(paginationItem);
   }
@@ -76,8 +79,31 @@ const initPagination = (carouselId) => {
 };
 initPagination('trust');
 
+
+const caseContainer = document.querySelector('.case-list');
+const caseShadow = document.querySelector('.case-list .light-shadow');
+const showMoreButton = document.getElementById('show-more');
+const showLessButton = document.getElementById('show-less');
+
+showMoreButton.addEventListener('click', () => {
+  caseContainer.style.maxHeight = 'none';
+  caseShadow.style.display='none';
+  showMoreButton.style.display = 'none';
+  showLessButton.style.display = 'inline-block';
+});
+
+showLessButton.addEventListener('click', () => {
+  caseContainer.style.maxHeight = '700px';
+  caseShadow.style.display='block';
+  showMoreButton.style.display = 'inline-block';
+  showLessButton.style.display = 'none';
+});
+
+
+
+
 const readMoreButtons = document.querySelectorAll(".read-more");
-const modal = document.querySelector(".modal");
+const casesModal = document.querySelector(".cases .modal");
 const modalTitle = document.getElementById("modal-title");
 const modalDescription = document.getElementById("modal-description");
 
@@ -89,8 +115,8 @@ const downloadButton = document.querySelector(".download-button");
 
 readMoreButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    modal.classList.remove("hide");
-    modal.classList.add("show");
+    casesModal.classList.remove("hide");
+    casesModal.classList.add("show");
 
     const caseElement = button.parentElement;
     modalTitle.textContent = caseElement.querySelector("h2").textContent;
@@ -120,21 +146,21 @@ readMoreButtons.forEach((button) => {
       modalResults.appendChild(li);
     });
 
-    modal.style.display = "block";
+    casesModal.style.display = "block";
   });
 });
 
-const closeModal = () => {
-  modal.classList.add("hide");
+const closeCasesModal = () => {
+  casesModal.classList.add("hide");
 
-  modal.classList.remove("show");
+  casesModal.classList.remove("show");
   setTimeout(() => {
-    modal.style.display = "none";
+    casesModal.style.display = "none";
   }, 500);
 };
 
 closeButton.addEventListener("click", () => {
-  closeModal();
+  closeCasesModal();
 });
 
 downloadButton.addEventListener("click", () => {
@@ -146,7 +172,13 @@ downloadButton.addEventListener("click", () => {
     "download",
     `${modalTitle.textContent.substring(0, 7)}.pdf`
   );
-  closeModal();
+  closeCasesModal();
+});
+
+
+const formBtn = document.getElementById("formBtn");
+formBtn.addEventListener("click", (e) => {
+  e.preventDefault();
 });
 
 window.addEventListener("click", (event) => {
@@ -156,7 +188,27 @@ window.addEventListener("click", (event) => {
   ) {
     dropDownHandler();
   }
-  if (event.target == modal) {
-    closeModal();
+  if (event.target == contactModal || event.target == casesModal) {
+    closeCasesModal();
+    closeContactModal();
   }
 });
+
+const contactModal = document.querySelector(".contact .modal")
+const contactBtn_pre = document.getElementById("contact-btn-pre")
+const contactBtn_sol = document.getElementById("contact-btn-sol")
+
+
+const closeContactModal = () => {
+  contactModal.classList.add("hide");
+
+  contactModal.classList.remove("show");
+  setTimeout(() => {
+    contactModal.style.display = "none";
+  }, 500);
+};
+[contactBtn_pre, contactBtn_sol].forEach(el=>el.addEventListener("click", () => {
+  contactModal.classList.remove("hide");
+  contactModal.classList.add("show");
+  contactModal.style.display = "block";
+}))
