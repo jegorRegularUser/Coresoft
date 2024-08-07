@@ -1,3 +1,4 @@
+//DropDown
 const navToggle = document.querySelector(".nav__toggle");
 const nav = document.querySelector(".nav");
 const navDropdown = document.querySelector(".nav__dropdown");
@@ -19,7 +20,7 @@ const dropDownHandler = () => {
 };
 navToggle.addEventListener("click", dropDownHandler);
 
-
+//Slider
 const moveSlides = (carouselId, direction) => {
   const sliderContainer = document.getElementById(`${carouselId}-slider`);
   const slides = sliderContainer?.querySelector(".slides");
@@ -36,7 +37,7 @@ const moveSlides = (carouselId, direction) => {
   }
 
   const translateX = -currentIndex * 25 + "%";
-  slides.style.transition = 'transform 0.5s ease-in-out';
+  slides.style.transition = "transform 0.5s ease-in-out";
   slides.style.transform = `translateX(${translateX})`;
 
   sliderContainer.dataset.currentIndex = currentIndex;
@@ -57,7 +58,7 @@ const updatePagination = (carouselId, currentIndex) => {
     if (i >= currentIndex && i < currentIndex + 4) {
       paginationItem.classList.add("active");
     } else {
-      paginationItem.classList.remove('active');
+      paginationItem.classList.remove("active");
     }
     pagination.appendChild(paginationItem);
   }
@@ -77,32 +78,29 @@ const initPagination = (carouselId) => {
 
   updatePagination(carouselId, 0);
 };
-initPagination('trust');
+initPagination("trust");
 
+//show less-more cases
+const caseContainer = document.querySelector(".case-list");
+const caseShadow = document.querySelector(".case-list .light-shadow");
+const showMoreButton = document.getElementById("show-more");
+const showLessButton = document.getElementById("show-less");
 
-
-const caseContainer = document.querySelector('.case-list');
-const caseShadow = document.querySelector('.case-list .light-shadow');
-const showMoreButton = document.getElementById('show-more');
-const showLessButton = document.getElementById('show-less');
-
-showMoreButton.addEventListener('click', () => {
-  caseContainer.style.maxHeight = 'none';
-  caseShadow.style.display='none';
-  showMoreButton.style.display = 'none';
-  showLessButton.style.display = 'inline-block';
+showMoreButton.addEventListener("click", () => {
+  caseContainer.style.maxHeight = "none";
+  caseShadow.style.display = "none";
+  showMoreButton.style.display = "none";
+  showLessButton.style.display = "inline-block";
 });
 
-showLessButton.addEventListener('click', () => {
-  caseContainer.style.maxHeight = '700px';
-  caseShadow.style.display='block';
-  showMoreButton.style.display = 'inline-block';
-  showLessButton.style.display = 'none';
+showLessButton.addEventListener("click", () => {
+  caseContainer.style.maxHeight = "700px";
+  caseShadow.style.display = "block";
+  showMoreButton.style.display = "inline-block";
+  showLessButton.style.display = "none";
 });
 
-
-
-
+//cases modal window
 const readMoreButtons = document.querySelectorAll(".read-more");
 const casesModal = document.querySelector(".cases .modal");
 const modalTitle = document.getElementById("modal-title");
@@ -176,11 +174,10 @@ downloadButton.addEventListener("click", () => {
   closeCasesModal();
 });
 
-
-
-const contactModal = document.querySelector(".contact .modal")
-const contactBtn_pre = document.getElementById("contact-btn-pre")
-const contactBtn_sol = document.getElementById("contact-btn-sol")
+//contact modal window
+const contactModal = document.querySelector(".contact .modal");
+const contactBtn_pre = document.getElementById("contact-btn-pre");
+const contactBtn_sol = document.getElementById("contact-btn-sol");
 
 const closeContactModal = () => {
   contactModal.classList.add("hide");
@@ -191,15 +188,15 @@ const closeContactModal = () => {
   }, 500);
 };
 
-[contactBtn_pre, contactBtn_sol].forEach(el=>el.addEventListener("click", () => {
-  contactModal.classList.remove("hide");
-  contactModal.classList.add("show");
-  contactModal.style.display = "block";
-}))
+[contactBtn_pre, contactBtn_sol].forEach((el) =>
+  el.addEventListener("click", () => {
+    contactModal.classList.remove("hide");
+    contactModal.classList.add("show");
+    contactModal.style.display = "block";
+  })
+);
 
-
-
-const modalFormBtn = document.getElementById("modalFormBtn")
+const modalFormBtn = document.getElementById("modalFormBtn");
 modalFormBtn.addEventListener("click", (e) => {
   e.preventDefault();
   closeContactModal();
@@ -209,7 +206,6 @@ const formBtn = document.getElementById("formBtn");
 formBtn.addEventListener("click", (e) => {
   e.preventDefault();
 });
-
 
 window.addEventListener("click", (event) => {
   if (

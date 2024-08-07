@@ -323,9 +323,9 @@ body {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-template-areas:
-        "icon1 icon2 icon3"
-        "h1 h2 h3"
-        "p1 p2 p3"
+            "icon1 icon2 icon3"
+            "h1 h2 h3"
+            "p1 p2 p3"
     }
 
     /*  Reviews*/
@@ -552,15 +552,15 @@ body {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(9, 1fr);
         grid-template-areas:
-        "icon1"
-        "h1"
-        "p1"
-        "icon2"
-        "h2"
-        "p2"
-        "icon3"
-        "h3"
-        "p3";
+            "icon1"
+            "h1"
+            "p1"
+            "icon2"
+            "h2"
+            "p2"
+            "icon3"
+            "h3"
+            "p3";
     }
 
 
@@ -789,8 +789,9 @@ a {
 }
 
 .card {
-    max-width: 255px;
-    object-fit: cover;
+    width: 255px;
+    height: 161px;
+    object-fit: contain;
     border: 1px solid var(--light-gray);
     border-radius: 0.5rem;
 }
