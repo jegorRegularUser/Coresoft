@@ -771,6 +771,7 @@ a {
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
+    padding: 0 20px;
 }
 
 .card {
@@ -940,7 +941,7 @@ a {
 }
 
 .service {
-
+    background-color: #ffffff;
     border: 1px solid var(--gray);
     padding: 20px 30px;
     border-radius: 1.5rem;
@@ -1129,6 +1130,25 @@ a {
     right: 0;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.pagination-item {
+    width: 24px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--light-gray);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color ease 0.5s;
+}
+
+.pagination-item.active {
+    background-color: var(--purple);
+}
 
 
 
@@ -1330,6 +1350,7 @@ a {
     font-size: 24px;
     font-weight: 600;
 }
+
 .reviews .text p {
     color: var(--font-gray);
     margin: 20px 0 60px;
@@ -1359,7 +1380,7 @@ a {
     font-size: 20px;
     margin: 10px 0 1rem;
 
-    
+
 }
 
 
@@ -1493,6 +1514,7 @@ a {
     text-align: center;
     margin-bottom: 40px;
 }
+
 .contact p {
     color: var(--gray);
 }

@@ -23,6 +23,7 @@ navToggle.addEventListener("click", dropDownHandler);
 const moveSlides = (carouselId, direction) => {
   const sliderContainer = document.getElementById(`${carouselId}-slider`);
   const slides = sliderContainer?.querySelector(".slides");
+  const pagination = document.getElementById(`${carouselId}-pagination`);
   const totalSlides = slides?.querySelectorAll(".slide").length;
 
   let currentIndex = parseInt(sliderContainer.dataset.currentIndex, 10) || 0;
@@ -38,12 +39,42 @@ const moveSlides = (carouselId, direction) => {
   slides.style.transform = `translateX(${translateX})`;
 
   sliderContainer.dataset.currentIndex = currentIndex;
+
+  updatePagination(carouselId, currentIndex);
 };
 
-const formBtn = document.getElementById("formBtn");
-formBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-});
+const updatePagination = (carouselId, currentIndex) => {
+  const pagination = document.getElementById(`${carouselId}-pagination`);
+  const totalSlides = document
+    .getElementById(`${carouselId}-slides`)
+    .querySelectorAll(".slide").length;
+  pagination.innerHTML = "";
+
+  for (let i = 0; i < totalSlides; i++) {
+    const paginationItem = document.createElement("div");
+    paginationItem.classList.add("pagination-item");
+    if (i >= currentIndex && i < currentIndex + 4) {
+      paginationItem.classList.add("active");
+    }
+    pagination.appendChild(paginationItem);
+  }
+};
+
+const initPagination = (carouselId) => {
+  const pagination = document.getElementById(`${carouselId}-pagination`);
+  const totalSlides = document
+    .getElementById(`${carouselId}-slides`)
+    .querySelectorAll(".slide").length;
+
+  for (let i = 0; i < totalSlides; i++) {
+    const paginationItem = document.createElement("div");
+    paginationItem.classList.add("pagination-item");
+    pagination.appendChild(paginationItem);
+  }
+
+  updatePagination(carouselId, 0);
+};
+initPagination('trust');
 
 const readMoreButtons = document.querySelectorAll(".read-more");
 const modal = document.querySelector(".modal");
@@ -92,6 +123,7 @@ readMoreButtons.forEach((button) => {
     modal.style.display = "block";
   });
 });
+
 const closeModal = () => {
   modal.classList.add("hide");
 
@@ -118,7 +150,10 @@ downloadButton.addEventListener("click", () => {
 });
 
 window.addEventListener("click", (event) => {
-  if (( !nav.contains(event.target) || event.target.localName === 'a') && isDropDownOpen) {
+  if (
+    (!nav.contains(event.target) || event.target.localName === "a") &&
+    isDropDownOpen
+  ) {
     dropDownHandler();
   }
   if (event.target == modal) {
