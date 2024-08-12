@@ -305,7 +305,7 @@ body {
 
 
     .modal {
-        z-index: 1;
+        z-index: 3;
         width: 100%;
     }
 
@@ -315,6 +315,12 @@ body {
 
     .cases .modal-buttons .btn {
         width: 40%;
+    }
+    .cases .modal h2 {
+        font-size: 2rem;
+    }
+    .cases .modal h3 {
+        font-size: 1.5rem;
     }
 
     /* Advantages */
@@ -365,6 +371,7 @@ body {
     }
 
     /*  Contact*/
+    
     /*footer  */
 
 
@@ -545,7 +552,12 @@ body {
     .cases .modal-buttons .btn {
         width: calc(50% - 12px);
     }
-
+    .cases .modal h2 {
+        font-size: 2rem;
+    }
+    .cases .modal h3 {
+        font-size: 1.5rem;
+    }
     /* Advantages */
 
     .advantages-list {
@@ -662,6 +674,13 @@ body {
 
     .cases .modal-buttons .btn {
         width: calc(100% - 12px);
+    }
+
+    .cases .modal h2 {
+        font-size: 1.5rem;
+    }
+    .cases .modal h3 {
+        font-size: 1.2rem;
     }
 
     /* Advantages */
@@ -1277,7 +1296,7 @@ a {
 .case-details .case h2 {
     color: var(--purple);
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     margin-bottom: 40px;
     line-height: 1;
 }
@@ -1308,10 +1327,22 @@ a {
     line-height: 1.5;
 }
 
+.cases .modal h2 {
+    color: var(--purple);
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 1;
+}
+
+.cases .modal h3 {
+    font-weight: 600;
+    line-height: 1;
+    margin: 20px 0 10px;
+}
+
 .cases .modal-buttons .btn {
     display: flex;
     justify-content: center;
-
     align-items: flex-end;
     gap: 0.75rem;
 }
@@ -1595,6 +1626,7 @@ button {
 }
 
 .contact .modal-content {
+    position: relative;
     padding: 120px 50px;
     display: flex;
     flex-direction: column;
