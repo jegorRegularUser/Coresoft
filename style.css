@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    min-width: 400px;
+
     background-color: #FFFFFF;
     --light-purple: #6a68ff;
     --purple: #5552E8;
@@ -26,7 +26,7 @@
 body {
     margin: 0;
     padding: 0;
-    min-width: 400px;
+    min-width: 350px;
 }
 
 @media (min-width:1201px) {
@@ -59,10 +59,6 @@ body {
     /*Automation  */
     /*Trust  */
     /* Cases */
-    .case-details .case button {
-        bottom: 65px;
-        left: 72px;
-    }
 
     .modal-content {
         width: 50%;
@@ -127,11 +123,6 @@ body {
     /*Automation  */
     /*Trust  */
     /* Cases */
-    .case-details .case button {
-        bottom: 45px;
-        left: 42px;
-    }
-
     .modal-content {
         width: 70%;
         margin: 15% auto;
@@ -195,6 +186,11 @@ body {
     /*Awards  */
     /* Why Choose Us */
     /*  Contact*/
+    .contact form {
+        justify-content: center;
+        flex-direction: column;
+    }
+
     /*footer  */
 
 
@@ -236,6 +232,7 @@ body {
 
     .desc {
         font-size: 22px;
+        margin: 38px 0 24px;
     }
 
     /*business-solutions  */
@@ -285,6 +282,13 @@ body {
 
     /*Trust  */
     /* Cases */
+    .cases {
+        margin: 0 auto 200px;
+    }
+    .case-list .btn {
+        bottom: 50px;
+    }
+
     .case-list .case {
         padding: 15px;
         margin-bottom: 20px;
@@ -295,6 +299,9 @@ body {
         margin-right: 30px;
     }
 
+    .case-details {
+        margin-top: 100px;
+    }
 
     .case-details .case {
         width: calc(50% - 10px);
@@ -316,9 +323,11 @@ body {
     .cases .modal-buttons .btn {
         width: 40%;
     }
+
     .cases .modal h2 {
         font-size: 2rem;
     }
+
     .cases .modal h3 {
         font-size: 1.5rem;
     }
@@ -371,7 +380,7 @@ body {
     }
 
     /*  Contact*/
-    
+
     /*footer  */
 
 
@@ -418,6 +427,7 @@ body {
 
     .desc {
         font-size: 20px;
+        margin: 28px 0 20px;
     }
 
     /*business-solutions  */
@@ -509,6 +519,12 @@ body {
     }
 
     /* Cases */
+    .cases {
+        margin: 0 auto 100px;
+    }
+    .case-list .btn {
+        bottom: 170px;
+    }
 
     .case-list .case {
         flex-wrap: wrap;
@@ -526,6 +542,9 @@ body {
         padding: 0;
     }
 
+    .case-details {
+        margin-top: 0;
+    }
 
     .case-details .case {
         width: calc(100% - 20px);
@@ -552,12 +571,15 @@ body {
     .cases .modal-buttons .btn {
         width: calc(50% - 12px);
     }
+
     .cases .modal h2 {
         font-size: 2rem;
     }
+
     .cases .modal h3 {
         font-size: 1.5rem;
     }
+
     /* Advantages */
 
     .advantages-list {
@@ -624,22 +646,40 @@ body {
 
     /* general */
     .title {
-        font-size: 37px;
+        font-size: 32px;
     }
 
     /* header */
     /* Preview */
     .desc {
-        font-size: 18px;
+        font-size: 16px;
+        margin: 20px 0;
     }
 
     /*business-solutions  */
+    .business-solutions {
+        padding: 0 10px;
+    }
+
     .hardware-img {
         max-width: 300px;
         min-height: 300px;
+
+    }
+
+    .hardware {
+        margin: 0 auto;
+    }
+
+    .services-list {
+        margin: 30px auto 20px !important;
     }
 
     /* services */
+    .services {
+        padding: 50px 10px;
+    }
+
     /*IT Infrastructure  */
 
     .slide__mobile {
@@ -662,8 +702,8 @@ body {
 
     .contact .modal-content {
         width: 100%;
-
-        margin: 15% 0;
+        height: 100vh;
+        margin:  0;
     }
 
     .cases .modal-buttons {
@@ -679,6 +719,7 @@ body {
     .cases .modal h2 {
         font-size: 1.5rem;
     }
+
     .cases .modal h3 {
         font-size: 1.2rem;
     }
@@ -688,7 +729,7 @@ body {
     /*Awards  */
     /* Why Choose Us */
     .reason .content p {
-        height: 85px;
+        height: 75px;
     }
 
     .reason:not(:last-child)::after {
@@ -698,9 +739,7 @@ body {
     }
 
     /*  Contact*/
-    .contact form {
-        justify-content: center;
-    }
+
 
     /*footer  */
 
@@ -837,10 +876,19 @@ a {
 
 .modal-content {
     background-color: #ffffff;
-
+    position: relative;
     padding: 5px 20px 20px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     border-radius: 1rem;
+}
+
+.cancel-btn {
+    position: absolute;
+    color: var(--purple);
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    cursor: pointer;
 }
 
 /* header */
@@ -849,7 +897,8 @@ a {
     background-color: rgba(0, 0, 0, 0.9);
     position: fixed;
     padding: 15px 5vw;
-    min-width: 100vw;
+    width: 100vw;
+    min-width: 400px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -928,7 +977,6 @@ a {
 
 .preview-content .desc {
     max-width: 750px;
-    margin: 38px 0 24px;
 }
 
 .preview .arrow {
@@ -1215,7 +1263,6 @@ a {
 
 .cases {
     max-width: 1200px;
-    margin: 0 auto 200px;
 }
 
 
@@ -1244,13 +1291,12 @@ a {
 
 .case-list .btn {
     position: absolute;
-    bottom: 20px;
     left: calc(50% - 90px);
 }
 
 .case-list .light-shadow {
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     left: 0;
     width: 100%;
     height: 60%;
@@ -1265,7 +1311,6 @@ a {
     justify-content: space-between;
     padding: 20px 20px 0;
     line-height: 1.7;
-    margin-top: 100px;
 }
 
 .case-details ul {
@@ -1277,7 +1322,7 @@ a {
     position: relative;
     border-radius: 10px;
     background-color: var(--background-gray);
-    max-height: 750px;
+    max-height: 300px;
     overflow: hidden;
 }
 
@@ -1288,7 +1333,7 @@ a {
     left: 0;
     width: 100%;
     height: 60%;
-    background: linear-gradient(to top, var(--background-gray) 40%, transparent 100%);
+    background: linear-gradient(to top, var(--background-gray) 0%, var(--background-gray) 30%, transparent 100%);
     border-radius: 10px;
     pointer-events: none;
 }
@@ -1315,7 +1360,8 @@ a {
     gap: 0.75rem;
     padding: 18px 27px;
     position: absolute;
-
+    bottom: 15px;
+    left: 32px;
     z-index: 1;
 }
 
@@ -1330,7 +1376,7 @@ a {
 .cases .modal h2 {
     color: var(--purple);
     font-weight: 700;
-    margin-bottom: 30px;
+    margin: 30px 0;
     line-height: 1;
 }
 
@@ -1351,7 +1397,10 @@ a {
     display: flex;
     margin-top: 20px;
 }
-
+.cases .cancel-btn{
+    top: 10px;
+    right: 10px;
+}
 
 /* Advantages */
 
@@ -1626,7 +1675,6 @@ button {
 }
 
 .contact .modal-content {
-    position: relative;
     padding: 120px 50px;
     display: flex;
     flex-direction: column;
@@ -1642,13 +1690,15 @@ button {
     border: 2px solid var(--light-gray);
 }
 
-.contact .modal-content .text {
+.contact .modal-content {
     color: #000000;
 }
 
 .contact .modal-content p {
     color: #000000;
 }
+
+
 
 /*footer  */
 .contact-section {

@@ -174,11 +174,17 @@ downloadButton.addEventListener("click", () => {
   closeCasesModal();
 });
 
+const casesCancelBtn = document.getElementById("cases-cancel-btn")
+
+casesCancelBtn.addEventListener("click", e =>{
+  closeCasesModal();
+})
+
 //contact modal window
 const contactModal = document.querySelector(".contact .modal");
 const contactBtn_pre = document.getElementById("contact-btn-pre");
 const contactBtn_sol = document.getElementById("contact-btn-sol");
-
+const contactCancelBtn = document.getElementById("contact-cancel-btn")
 const closeContactModal = () => {
   contactModal.classList.add("hide");
 
@@ -197,11 +203,14 @@ const closeContactModal = () => {
 );
 
 const modalFormBtn = document.getElementById("modalFormBtn");
+
 modalFormBtn.addEventListener("click", (e) => {
   e.preventDefault();
   closeContactModal();
 });
-
+contactCancelBtn.addEventListener("click", e =>{
+  closeContactModal();
+})
 const formBtn = document.getElementById("formBtn");
 formBtn.addEventListener("click", (e) => {
   e.preventDefault();
