@@ -285,6 +285,7 @@ body {
     .cases {
         margin: 0 auto 200px;
     }
+
     .case-list .btn {
         bottom: 50px;
     }
@@ -335,6 +336,7 @@ body {
     /* Advantages */
 
     .advantages-list {
+        grid-gap: 25px;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-template-areas:
@@ -522,6 +524,7 @@ body {
     .cases {
         margin: 0 auto 100px;
     }
+
     .case-list .btn {
         bottom: 170px;
     }
@@ -543,7 +546,7 @@ body {
     }
 
     .case-details {
-        margin-top: 0;
+        margin-top: 50px;
     }
 
     .case-details .case {
@@ -583,8 +586,9 @@ body {
     /* Advantages */
 
     .advantages-list {
+        grid-gap: 10px;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(9, 1fr);
+        grid-template-rows: repeat(1, 2fr, 1, 1fr, 1, 1fr);
         grid-template-areas:
             "icon1"
             "h1"
@@ -595,6 +599,12 @@ body {
             "icon3"
             "h3"
             "p3";
+    }
+    .advantages-list .icon {
+        margin-bottom: 10px !important;
+    }
+    .advantages-list p {
+        margin-bottom: 30px !important;
     }
 
 
@@ -649,6 +659,15 @@ body {
         font-size: 32px;
     }
 
+    .modal {
+        width: 100vw;
+    }
+
+    .modal-content {
+        width: 100%;
+        margin: 0;
+    }
+
     /* header */
     /* Preview */
     .desc {
@@ -691,19 +710,11 @@ body {
     /*Automation  */
     /*Trust  */
     /* Cases */
-    .modal {
-        width: 100vw;
-    }
 
-    .modal-content {
-        width: 100%;
-        margin: 0;
-    }
 
-    .contact .modal-content {
-        width: 100%;
-        height: 100vh;
-        margin:  0;
+
+    .case-details {
+        margin-top: 0px;
     }
 
     .cases .modal-buttons {
@@ -740,6 +751,11 @@ body {
 
     /*  Contact*/
 
+    .contact .modal-content {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+    }
 
     /*footer  */
 
@@ -1291,7 +1307,11 @@ a {
 
 .case-list .btn {
     position: absolute;
-    left: calc(50% - 90px);
+    left: calc(50% - 85px);
+}
+
+.case-list .btn.hide {
+    left: calc(50% - 60px);
 }
 
 .case-list .light-shadow {
@@ -1397,7 +1417,8 @@ a {
     display: flex;
     margin-top: 20px;
 }
-.cases .cancel-btn{
+
+.cases .cancel-btn {
     top: 10px;
     right: 10px;
 }
@@ -1413,7 +1434,6 @@ a {
 .advantages-list {
     display: grid;
     max-width: 1200px;
-    grid-gap: 25px;
     margin: 48px auto 0;
 }
 
